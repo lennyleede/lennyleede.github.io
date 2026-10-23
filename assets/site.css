@@ -93,4 +93,6 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);fon
   .g3,.g2{grid-template-columns:1fr}
   h1{font-size:32px}
   .links{display:none}
+  /* .links 隐藏后没人再吃 auto 边距，把语言开关顶到右侧 */
+  .lang{margin-left:auto}
 }
