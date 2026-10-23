@@ -5,4 +5,4 @@
 - 门户：https://lennyleede.github.io/
 - WinPE 项目页：https://lennyleede.github.io/winpe/
 
-纯静态站点（HTML + CSS + 原生 JS），无构建步骤。源文件维护在 `winpe-rescue-desktop` 仓库的 `site/` 目录，发布时同步到本仓库根目录。
+纯静态站点（HTML + CSS + 原生 JS），无构建步骤。发布时把本地 `site/` 目录的内容同步到本仓库根目录。
