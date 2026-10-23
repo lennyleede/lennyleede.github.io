@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WinPE 远程救援桌面 / WinPE Rescue Desktop</title>
+<meta name="description" content="能真正连上 WiFi、驱动自愈、可远程进 PE 修机的 Windows 预启动环境。A WinPE rescue desktop with working WiFi, self-healing drivers and remote access.">
+<meta name="theme-color" content="#0a1622">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WinPE 远程救援桌面 / WinPE Rescue Desktop">
+<meta property="og:description" content="能连 WiFi、驱动自愈、可远程修机的 WinPE 救援盘。A WinPE rescue disc with working WiFi, self-healing drivers and remote access.">
+<!-- og:image 需要绝对 URL 才会被社交平台抓取；绑定域名后改成 https://<域名>/assets/img/pe-panel-zh.png -->
+<meta property="og:image" content="../assets/img/pe-panel-zh.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232ec4b6'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial,sans-serif' font-size='13' font-weight='700' fill='%2304222b' text-anchor='middle'%3EPE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="../index.html"><span class="logo">PE</span><span data-k="brand"></span></a>
+  <div class="links">
+    <a href="../index.html" data-k="n_all"></a>
+    <a href="#features" data-k="n_feat"></a>
+    <a href="#panel" data-k="n_panel"></a>
+    <a href="#start" data-k="n_start"></a>
+    <a href="#limits" data-k="n_limits"></a>
+  </div>
+  <div class="lang">
+    <button data-lang="zh" onclick="setLang('zh')">中文</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav></div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <h1><span data-k="h1a"></span><em data-k="h1b"></em></h1>
+  <p class="sub" data-k="hero_sub"></p>
+  <div class="cta">
+    <a class="btn pri" href="https://github.com/lennyleede/winpe-rescue-desktop/releases/tag/v8" data-k="btn_dl"></a>
+    <a class="btn sec" href="https://github.com/lennyleede/winpe-rescue-desktop" data-k="btn_src"></a>
+  </div>
+  <div class="badges">
+    <span class="badge" data-k="bg1"></span><span class="badge" data-k="bg2"></span>
+    <span class="badge" data-k="bg3"></span><span class="badge" data-k="bg4"></span>
+  </div>
+</div></div>
+
+<section id="features"><div class="wrap">
+  <h2 data-k="feat_h"></h2>
+  <p class="lead" data-k="feat_lead"></p>
+  <div class="grid g3">
+    <div class="card"><span class="tag" data-k="f1_tag"></span><h3 data-k="f1_h"></h3><p data-k="f1_p"></p></div>
+    <div class="card"><span class="tag" data-k="f2_tag"></span><h3 data-k="f2_h"></h3><p data-k="f2_p"></p></div>
+    <div class="card"><span class="tag" data-k="f3_tag"></span><h3 data-k="f3_h"></h3><p data-k="f3_p"></p></div>
+  </div>
+</div></section>
+
+<section id="panel"><div class="wrap">
+  <h2 data-k="panel_h"></h2>
+  <p class="lead" data-k="panel_lead"></p>
+  <div class="grid g2">
+    <figure class="shot">
+      <img src="../assets/img/pe-panel-zh.png" alt="" onerror="this.closest('.shot').classList.add('missing')">
+      <span class="ph" data-k="ph_zh"></span>
+      <figcaption data-k="cap_zh"></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="../assets/img/pe-panel-en.png" alt="" onerror="this.closest('.shot').classList.add('missing')">
+      <span class="ph" data-k="ph_en"></span>
+      <figcaption data-k="cap_en"></figcaption>
+    </figure>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3 data-k="c1_h"></h3><p data-k="c1_p"></p></div>
+    <div class="card"><h3 data-k="c2_h"></h3><p data-k="c2_p"></p></div>
+    <div class="card"><h3 data-k="c3_h"></h3><p data-k="c3_p"></p></div>
+  </div>
+</div></section>
+
+<section id="start"><div class="wrap">
+  <h2 data-k="start_h"></h2>
+  <p class="lead" data-k="start_lead"></p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag" data-k="u_tag"></span><h3 data-k="u_h"></h3>
+      <p data-k="u_p"></p>
+      <pre><code>WinPE_Desktop_v8.iso  →  写入 U 盘  →  UEFI 启动目标机</code></pre>
+      <p data-k="u_p2"></p>
+    </div>
+    <div class="card">
+      <span class="tag" data-k="d_tag"></span><h3 data-k="d_h"></h3>
+      <p data-k="d_p"></p>
+      <pre><code>.\build.ps1
+.\patch_wifi.ps1
+.\test\update_overlay.ps1
+.\test\36_RunGates.ps1</code></pre>
+      <p class="note" data-k="d_note"></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <h2 data-k="lim_h"></h2>
+  <p class="lead" data-k="lim_lead"></p>
+  <ul>
+    <li data-k="lim1"></li><li data-k="lim2"></li><li data-k="lim3"></li><li data-k="lim4"></li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap"><span data-k="foot"></span></div></footer>
+
+<script src="../assets/site.js"></script>
+<script>
+var I18N = {
+zh: {
+  brand: "WinPE 远程救援桌面", page_title: "WinPE 远程救援桌面 — 能连 WiFi、驱动自愈、可远程修机的预启动环境",
+  n_all: "← 全部项目", n_feat: "它能做什么", n_panel: "桌面面板", n_start: "快速开始", n_limits: "已知限制",
+  h1a:"起不来、连不上、进不去的机器，", h1b:"一张盘解决",
+  hero_sub:"一个真正可用的 Windows 预启动救援环境：能连上 WiFi、缺驱动会自己找回、并且允许你从另一台机器远程进来修机。刻到 U 盘就能用。",
+  btn_dl:"下载 ISO（v8）", btn_src:"查看源码",
+  bg1:"Windows x64", bg2:"PowerShell 构建", bg3:"HTA 面板 docMode 8", bg4:"中英双语",
+  feat_h:"三件别人做不到 / 做不好的事", feat_lead:"绝大多数救援盘的痛点是：进得去 PE，却上不了网、认不出盘、只能站在机器旁边看着。",
+  f1_tag:"网络", f1_h:"WiFi 真的可用", f1_p:"wlansvc / wcmsvc 离线烘进镜像，L2Schemas、vWiFi 过滤栈、WDI 框架、CSP 表全部对齐官方 WinRE。图形面板可扫描、连接、断开并拿到 IP —— 不是只支持有线。",
+  f2_tag:"驱动", f2_h:"驱动自愈", f2_p:"开机 netdrvfix 按 PCI / USB 实例 ID 查表 drvload，内置精选驱动池（无线 9 目录 / 23 INF，另含有线与存储池）。板载网卡、NVMe、VMD 控制器起不来时当场找回。",
+  f3_tag:"远程", f3_h:"远程进 PE 修机", f3_p:"自研 pe-sshd（22 端口，密码或密钥登录）+ frpc 穿透，宿主机可远程执行命令、拉日志、跑修复脚本。人不用到现场。",
+  panel_h:"桌面面板：20 个磁贴，四组分区", panel_lead:"开机即见。终端与磁盘 / 离线修复 / 网络与远程 / 日志与电源四组，中英自动判定 + 一键切换，底栏常驻网络与 SSH 状态灯。",
+  ph_zh:"（截图待补：在 VM 的 PE 里重拍，避免泄露真实机器名与序列号）", cap_zh:"中文界面 · 顶栏显示机型身份与构建号",
+  ph_en:"（screenshot pending — to be re-shot inside the VM's PE）", cap_en:"English UI · same layout, one-click language switch",
+  c1_h:"救援五件套", c1_p:"bootfix（引导体检/BCD 重建）、filefix（离线 sfc）、drvfix（禁用启动关键驱动清单）、letterfix（盘符还原）、gptfix（分区表体检与从盘外字节备份重建）。",
+  c2_h:"五场实机演练背书", c2_p:"引导损坏、驱动禁用蓝屏、系统文件破坏、盘符丢失、GPT 双表清零 —— 全部通过远程通道在 VM 上完成注入与修复，规程写在演练报告里。",
+  c3_h:"门禁驱动的工程盘", c3_p:"出盘前必过 36_RunGates.ps1：语法、CRLF/BOM、双语键集一一对应、驱动池完整性、服务键形状、L2Schemas 数量。判据本身也有红灯分支测试。",
+  start_h:"怎么用", start_lead:"使用者只要一张 U 盘；要改要构建的，仓库里四条命令。",
+  u_tag:"使用者", u_h:"刻盘 → 启动 → 干活", u_p:"下载 WinPE_Desktop_v8.iso（约 997 MB），用 Rufus / Ventoy / make_usb.ps1 写入 U 盘，在目标机上按启动菜单选 UEFI 或 Legacy 启动。",
+  u_p2:"进桌面后面板自动就位；需要远程时，底栏直接给出 ssh Administrator@IP，点 IP 可复制命令。",
+  d_tag:"构建者", d_h:"从源码出盘", d_p:"需要 Windows ADK + WinPE 扩展、PowerShell 5.1，以及管理员权限。",
+  d_note:"36_RunGates.ps1 全绿才建议出盘；注入与打包脚本会改镜像，请在干净工作副本上跑。",
+  lim_h:"已知限制", lim_lead:"先把边界说清楚，免得踩坑时才发现。",
+  lim1:"WiFi 只能实机验证：Hyper-V 没有 802.11 设备模型，无线网卡也无法挂 external 交换机。",
+  lim2:"唯一记录在案的驱动缺口是 netrtwlane02（缺 rtlCoInst.dll / .dat，影响 7 个 PCI\\VEN_10EC 实例 ID）；现场用 pe_getdriver 抓厂商包，或插一个 USB 网卡即可绕过。",
+  lim3:"PE 注册表不持久化，重启后界面语言回到自动判定，所有临时配置都会消失。",
+  lim4:"boot.wim 全量驻留内存，精选驱动池会带来几百 MB 的额外 RAM 占用；内存较小的老机器建议精简驱动池。",
+  foot:"源码、构建脚本与门禁：github.com/lennyleede/winpe-rescue-desktop（中 / 英双语 README）。ISO 通过 GitHub Releases 分发。"
+},
+en: {
+  brand:"WinPE Rescue Desktop", page_title:"WinPE Rescue Desktop — a boot media with working WiFi, self-healing drivers and remote access",
+  n_all:"← All projects", n_feat:"Capabilities", n_panel:"Desktop Panel", n_start:"Quick Start", n_limits:"Known Limits",
+  h1a:"For machines that won't boot,", h1b:" won't connect, won't open",
+  hero_sub:"A genuinely usable Windows pre-installation rescue environment: real WiFi, self-healing drivers, and remote access so you can fix a machine from another one. Burn it to a USB stick and go.",
+  btn_dl:"Download ISO (v8)", btn_src:"View source",
+  bg1:"Windows x64", bg2:"PowerShell build", bg3:"HTA panel, docMode 8", bg4:"Bilingual UI",
+  feat_h:"Three things most rescue discs get wrong", feat_lead:"The usual pain: you can boot into PE, but there is no network, the disks are invisible, and you have to stand next to the machine.",
+  f1_tag:"Network", f1_h:"WiFi actually works", f1_p:"wlansvc and wcmsvc are baked in offline — L2Schemas, the vWiFi filter stack, the WDI framework and the CSP table all aligned with stock WinRE. The GUI panel scans, connects, disconnects and acquires an IP. Not wired-only.",
+  f2_tag:"Drivers", f2_h:"Driver self-healing", f2_p:"At boot, netdrvfix looks up each PCI / USB instance ID and drvloads the matching package. A curated driver pool ships in the image (9 WLAN folders / 23 INF, plus NIC and storage pools), so onboard Wi-Fi, NVMe and VMD controllers come back on the spot.",
+  f3_tag:"Remote", f3_h:"Fix it from elsewhere", f3_p:"A purpose-built pe-sshd (port 22, password or key auth) plus frpc tunneling let another machine run commands, pull logs and drive the repair scripts remotely.",
+  panel_h:"Desktop panel: 20 tiles in four groups", panel_lead:"Waiting on the desktop at boot. Terminal & Disk / Rescue Repair / Network & Remote / Logs & Power, with automatic language detection and one-click switching. The status bar keeps network and SSH state visible.",
+  ph_zh:"(screenshot pending — to be re-shot inside the VM's PE)", cap_zh:"Chinese UI · model identity and build number in the header",
+  ph_en:"(screenshot pending — to be re-shot inside the VM's PE)", cap_en:"English UI · same layout, one-click language switch",
+  c1_h:"Five repair tools", c1_p:"bootfix (boot survey / BCD rebuild), filefix (offline sfc), drvfix (boot-critical disabled drivers), letterfix (drive-letter restore), gptfix (partition-table check and rebuild from an off-disk byte backup).",
+  c2_h:"Backed by five live drills", c2_p:"Broken boot, disabled-driver BSOD, corrupted system files, lost drive letter, wiped primary+backup GPT — each injected and repaired over the remote channel in a VM, with the procedure written up.",
+  c3_h:"Gate-driven engineering", c3_p:"Nothing ships until 36_RunGates.ps1 is green: syntax, CRLF/BOM, bilingual key parity, driver-pool completeness, service-key shape, L2Schemas counts. The assertions themselves have red-branch tests.",
+  start_h:"How to use it", start_lead:"Users need one USB stick; builders need four commands.",
+  u_tag:"Users", u_h:"Burn → boot → work", u_p:"Download WinPE_Desktop_v8.iso (about 997 MB), write it to a USB stick with Rufus, Ventoy or make_usb.ps1, then pick UEFI or Legacy boot on the target machine.",
+  u_p2:"The panel is on the desktop once it loads. For remote work, the status bar shows ssh Administrator@IP and clicking the IP copies the command.",
+  d_tag:"Builders", d_h:"Build from source", d_p:"Requires the Windows ADK with the WinPE add-on, PowerShell 5.1, and an elevated session.",
+  d_note:"Only burn an ISO while 36_RunGates.ps1 is green; the injection and packaging scripts modify images, so work on a clean copy.",
+  lim_h:"Known limits", lim_lead:"Boundaries first, so nothing surprises you mid-rescue.",
+  lim1:"WiFi can only be validated on real hardware: Hyper-V has no 802.11 device model and wireless adapters cannot back an external switch.",
+  lim2:"The single documented driver gap is netrtwlane02 (missing rtlCoInst.dll / .dat, affecting 7 PCI\\VEN_10EC instance IDs). Workaround: run pe_getdriver on the target to grab the vendor package, or plug in a USB adapter.",
+  lim3:"The PE registry is not persistent — language detection, profiles and temporary settings reset on reboot.",
+  lim4:"boot.wim lives entirely in RAM, and the curated driver pool adds a few hundred MB of footprint; trim the pool for low-memory machines.",
+  foot:"Source, build scripts and gates: github.com/lennyleede/winpe-rescue-desktop (bilingual README). ISOs are distributed through GitHub Releases."
+}
+};
+initSite(I18N);
+</script>
+</body>
+</html>

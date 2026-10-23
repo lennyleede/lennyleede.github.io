@@ -1,0 +1,94 @@
+/* 共享样式：门户与各项目落地页共用。改配色只改这里的 :root 变量。 */
+:root{
+  --bg:#0a1622; --bg2:#0f2233; --card:#132a3f; --line:#1e3b56;
+  --fg:#e6eef6; --dim:#8fa8bf; --acc:#2ec4b6; --acc2:#4a9eff; --warn:#ff6b6b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc2);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* 顶栏 */
+header{position:sticky;top:0;z-index:10;background:rgba(10,22,34,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);font-size:17px}
+.brand:hover{text-decoration:none}
+.logo{width:30px;height:30px;border-radius:6px;background:var(--acc);color:#04222b;
+  display:grid;place-items:center;font-size:12px;font-weight:800;letter-spacing:.5px}
+/* 门户标记：工（工坊）——三条圆头笔画，与 logo 方块同高 */
+.mark{width:30px;height:30px;display:block;flex:0 0 auto;border-radius:8px}
+.links{display:flex;gap:16px;margin-left:auto;font-size:14px}
+.links a{color:var(--dim)} .links a:hover{color:var(--fg);text-decoration:none}
+.lang{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.lang button{background:transparent;color:var(--dim);border:0;padding:5px 11px;font-size:13px;cursor:pointer}
+.lang button.on{background:var(--card);color:var(--fg)}
+
+/* hero */
+.hero{padding:72px 0 54px;background:
+  radial-gradient(900px 380px at 12% -8%,rgba(46,196,182,.16),transparent 60%),
+  radial-gradient(700px 340px at 88% 0%,rgba(74,158,255,.14),transparent 62%)}
+h1{font-size:42px;line-height:1.25;margin:0 0 14px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{font-size:19px;color:var(--dim);max-width:760px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid transparent}
+.btn.pri{background:var(--acc);color:#04222b} .btn.pri:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.sec{border-color:var(--line);color:var(--fg)} .btn.sec:hover{text-decoration:none;border-color:var(--acc)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.badge{font-size:12px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:3px 11px}
+
+/* 区块 */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:27px;margin:0 0 8px}
+.lead{color:var(--dim);margin:0 0 30px;max-width:760px}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:20px 21px}
+.card h3{margin:0 0 7px;font-size:17px}
+.card p{margin:0;color:var(--dim);font-size:14.5px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--acc);margin-bottom:9px;font-weight:700}
+
+/* 项目卡（门户首页） */
+.proj{display:block;background:var(--card);border:1px solid var(--line);border-radius:13px;
+  padding:24px 26px;color:var(--fg);transition:border-color .15s,transform .15s}
+.proj:hover{text-decoration:none;border-color:var(--acc);transform:translateY(-2px)}
+.proj .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.proj .ico{width:42px;height:42px;border-radius:9px;background:var(--acc);color:#04222b;
+  display:grid;place-items:center;font-weight:800;font-size:13px;letter-spacing:.5px;flex:0 0 auto}
+.proj h3{margin:0;font-size:19px}
+.proj .status{margin-left:auto;font-size:11.5px;color:var(--acc);border:1px solid var(--line);
+  border-radius:999px;padding:2px 10px;white-space:nowrap}
+.proj p{color:var(--dim);font-size:14.5px;margin:0 0 14px}
+.proj .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.proj .arrow{font-size:14px;font-weight:600;color:var(--acc)}
+.proj.soon{opacity:.62}
+.proj.soon:hover{border-color:var(--line);transform:none}
+.proj.soon .ico{background:var(--line);color:var(--dim)}
+
+/* 截图位 */
+.shot{margin:0;background:var(--card);border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:10px 15px;font-size:13px;color:var(--dim);border-top:1px solid var(--line)}
+.shot.missing{min-height:210px}
+.shot.missing img{display:none}
+.shot.missing .ph{display:grid;place-items:center;min-height:210px;color:var(--dim);
+  font-size:13.5px;border-bottom:1px dashed var(--line);padding:20px;text-align:center}
+.ph{display:none}
+
+/* 正文元素 */
+pre{background:#071320;border:1px solid var(--line);border-radius:9px;padding:14px 16px;
+  overflow:auto;font-size:13.5px;line-height:1.6}
+code{font-family:"Cascadia Mono",Consolas,"SFMono-Regular",Menlo,monospace;color:#cde6ff}
+ul{margin:0;padding-left:20px;color:var(--dim)} ul li{margin:6px 0}
+.note{font-size:13.5px;color:var(--dim);border-left:3px solid var(--warn);padding-left:13px;margin-top:22px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);font-size:13.5px}
+
+@media(max-width:860px){
+  .g3,.g2{grid-template-columns:1fr}
+  h1{font-size:32px}
+  .links{display:none}
+}

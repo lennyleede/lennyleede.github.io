@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lennylee 的工坊 / lennylee's workshop</title>
+<meta name="description" content="一个放小工具的地方：能直接用的东西，和把它们做完的过程。">
+<meta name="theme-color" content="#0a1622">
+<meta property="og:type" content="website">
+<meta property="og:title" content="lennylee 的工坊 / lennylee's workshop">
+<meta property="og:description" content="一个放小工具的地方：能直接用的东西，和把它们做完的过程。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232ec4b6'/%3E%3Cg stroke='%2304222b' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M9 10.5h14M16 10.5v11M9 21.5h14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2ec4b6"></rect><g stroke="#04222b" stroke-width="2.6" stroke-linecap="round"><path d="M9 10.5h14M16 10.5v11M9 21.5h14"></path></g></svg><span data-k="brand"></span></a>
+  <div class="links">
+    <a href="#projects" data-k="n_projects"></a>
+    <a href="#about" data-k="n_about"></a>
+    <a href="https://github.com/lennyleede" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="lang">
+    <button data-lang="zh" onclick="setLang('zh')">中文</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav></div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <h1><span data-k="h1a"></span><em data-k="h1b"></em></h1>
+  <p class="sub" data-k="hero_sub"></p>
+  <div class="cta">
+    <a class="btn pri" href="winpe/index.html" data-k="btn_winpe"></a>
+    <a class="btn sec" href="https://github.com/lennyleede" target="_blank" rel="noopener" data-k="btn_gh"></a>
+  </div>
+</div></div>
+
+<section id="projects"><div class="wrap">
+  <h2 data-k="proj_h"></h2>
+  <p class="lead" data-k="proj_lead"></p>
+  <div class="grid g2">
+
+    <a class="proj" href="winpe/index.html">
+      <div class="top">
+        <span class="ico">PE</span>
+        <h3 data-k="p1_h"></h3>
+        <span class="status" data-k="p1_status"></span>
+      </div>
+      <p data-k="p1_p"></p>
+      <div class="meta">
+        <span class="badge" data-k="p1_m1"></span>
+        <span class="badge" data-k="p1_m2"></span>
+        <span class="badge" data-k="p1_m3"></span>
+      </div>
+      <span class="arrow" data-k="p1_go"></span>
+    </a>
+
+    <div class="proj soon">
+      <div class="top">
+        <span class="ico">+</span>
+        <h3 data-k="p2_h"></h3>
+        <span class="status" data-k="p2_status"></span>
+      </div>
+      <p data-k="p2_p"></p>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2 data-k="about_h"></h2>
+  <p class="lead" data-k="about_p"></p>
+  <div class="grid g3">
+    <div class="card"><h3 data-k="a1_h"></h3><p data-k="a1_p"></p></div>
+    <div class="card"><h3 data-k="a2_h"></h3><p data-k="a2_p"></p></div>
+    <div class="card"><h3 data-k="a3_h"></h3><p data-k="a3_p"></p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span data-k="foot"></span></div></footer>
+
+<script src="assets/site.js"></script>
+<script>
+var I18N = {
+zh: {
+  page_title: "lennylee 的工坊 — 能直接用的东西，和把它们做完的过程",
+  brand: "lennylee 的工坊", n_projects: "项目", n_about: "关于",
+  h1a: "能直接用的东西，", h1b: "和把它做完的过程",
+  hero_sub: "这里放我自己会用的工具。每一个都从真实问题出发：先查清根因，再做成能交给别人用的形态。",
+  btn_winpe: "看看 WinPE 救援盘", btn_gh: "GitHub 主页",
+  proj_h: "项目", proj_lead: "一个项目一页，URL 就是站点下的目录名。",
+  p1_h: "WinPE 远程救援桌面", p1_status: "已发布",
+  p1_p: "能真正连上 WiFi、缺驱动会自己找回、并且允许你从另一台机器远程进 PE 修机的 Windows 预启动环境。带 20 磁贴双语面板与五件套离线修复工具。",
+  p1_m1: "Windows x64", p1_m2: "PowerShell 构建", p1_m3: "中英双语",
+  p1_go: "进入项目页 →",
+  p2_h: "下一个项目", p2_status: "位置预留",
+  p2_p: "新项目落地时，加一个目录、在首页加一张卡，链接就是站点下的 /项目名/。",
+  about_h: "关于这个站", about_p: "纯静态页面，托管在 GitHub Pages 上，没有后端、没有追踪脚本，也不加载任何第三方资源。",
+  a1_h: "一个项目一页", a1_p: "每个项目占站点下的一个目录，互不影响；首页只负责索引，项目页自己讲清楚能力与限制。",
+  a2_h: "中英双语", a2_p: "文案全部走 I18N 表，按浏览器语言自动判定，右上角可手动切换。键集完整性靠检查保证，不会出现只翻一半。",
+  a3_h: "源码可查", a3_p: "表格里的每个数字都来自仓库里可复现的构建与门禁脚本，不靠形容词。项目页底部给出源码与下载入口。",
+  foot: "源码托管在 GitHub；ISO 通过仓库的 Releases 分发。"
+},
+en: {
+  page_title: "lennylee's workshop — tools that actually work, and how they got there",
+  brand: "lennylee's workshop", n_projects: "Projects", n_about: "About",
+  h1a: "Things that actually work,", h1b: " and how they got there",
+  hero_sub: "A home for tools I use myself. Each one starts from a real problem: find the root cause first, then shape it into something someone else can pick up.",
+  btn_winpe: "See the WinPE rescue disc", btn_gh: "GitHub profile",
+  proj_h: "Projects", proj_lead: "One page per project. The URL is just the directory name under the site root.",
+  p1_h: "WinPE Rescue Desktop", p1_status: "Released",
+  p1_p: "A Windows pre-installation environment with genuinely working WiFi, drivers that heal themselves at boot, and remote access so you can repair a machine from another one. Ships a 20-tile bilingual panel and five offline repair tools.",
+  p1_m1: "Windows x64", p1_m2: "PowerShell build", p1_m3: "Bilingual UI",
+  p1_go: "Open project page →",
+  p2_h: "Next project", p2_status: "Reserved",
+  p2_p: "When a new project lands: add a directory, add a card on this page, and its URL becomes /name/ under the site root.",
+  about_h: "About this site", about_p: "Plain static pages on GitHub Pages — no backend, no analytics, no third-party assets.",
+  a1_h: "One page per project", a1_p: "Each project owns a directory under the site root. The home page only indexes; the project page states its capabilities and its limits.",
+  a2_h: "Bilingual by design", a2_p: "All copy lives in I18N tables, detected from the browser language and switchable in the corner. Key-set parity is checked, so nothing is half-translated.",
+  a3_h: "Claims you can check", a3_p: "Every number here comes from reproducible build and gate scripts in the repository — not from adjectives. Project pages link to source and downloads.",
+  foot: "Source is hosted on GitHub; ISOs are distributed through repository Releases."
+}
+};
+initSite(I18N);
+</script>
+</body>
+</html>
