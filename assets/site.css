@@ -44,6 +44,8 @@ section{padding:56px 0;border-top:1px solid var(--line)}
 h2{font-size:27px;margin:0 0 8px}
 .lead{color:var(--dim);margin:0 0 30px;max-width:760px}
 .grid{display:grid;gap:16px}
+/* 网格项默认 min-width:auto 会被 <pre> 的长行撑破单列布局 —— 显式归零，让 pre 自己横向滚动 */
+.grid>*{min-width:0}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g2{grid-template-columns:repeat(2,1fr)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:20px 21px}
