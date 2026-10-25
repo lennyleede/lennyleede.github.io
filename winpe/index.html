@@ -35,7 +35,7 @@
   <h1><span data-k="h1a"></span><em data-k="h1b"></em></h1>
   <p class="sub" data-k="hero_sub"></p>
   <div class="cta">
-    <a class="btn pri" href="https://github.com/lennyleede/winpe-rescue-desktop/releases/tag/v8" data-k="btn_dl"></a>
+    <a class="btn pri" href="https://github.com/lennyleede/winpe-rescue-desktop/releases/latest" data-k="btn_dl"></a>
     <a class="btn sec" href="https://github.com/lennyleede/winpe-rescue-desktop" data-k="btn_src"></a>
   </div>
   <div class="badges">
@@ -116,7 +116,7 @@ zh: {
   n_all: "← 全部项目", n_feat: "它能做什么", n_panel: "桌面面板", n_start: "快速开始", n_limits: "已知限制",
   h1a:"起不来、连不上、进不去的机器，", h1b:"一张盘解决",
   hero_sub:"一个真正可用的 Windows 预启动救援环境：能连上 WiFi、缺驱动会自己找回、并且允许你从另一台机器远程进来修机。刻到 U 盘就能用。",
-  btn_dl:"下载 ISO（v8）", btn_src:"查看源码",
+  btn_dl:"下载最新 ISO", btn_src:"查看源码",
   bg1:"Windows x64", bg2:"PowerShell 构建", bg3:"HTA 面板 docMode 8", bg4:"中英双语",
   feat_h:"三件别人做不到 / 做不好的事", feat_lead:"绝大多数救援盘的痛点是：进得去 PE，却上不了网、认不出盘、只能站在机器旁边看着。",
   f1_tag:"网络", f1_h:"WiFi 真的可用", f1_p:"wlansvc / wcmsvc 离线烘进镜像，L2Schemas、vWiFi 过滤栈、WDI 框架、CSP 表全部对齐官方 WinRE。图形面板可扫描、连接、断开并拿到 IP —— 不是只支持有线。",
@@ -129,7 +129,7 @@ zh: {
   c2_h:"五场实机演练背书", c2_p:"引导损坏、驱动禁用蓝屏、系统文件破坏、盘符丢失、GPT 双表清零 —— 全部通过远程通道在 VM 上完成注入与修复，规程写在演练报告里。",
   c3_h:"门禁驱动的工程盘", c3_p:"出盘前必过 36_RunGates.ps1：语法、CRLF/BOM、双语键集一一对应、驱动池完整性、服务键形状、L2Schemas 数量。判据本身也有红灯分支测试。",
   start_h:"怎么用", start_lead:"使用者只要一张 U 盘；要改要构建的，仓库里四条命令。",
-  u_tag:"使用者", u_h:"刻盘 → 启动 → 干活", u_p:"下载 WinPE_Desktop_v8.iso（约 997 MB），用 Rufus / Ventoy / make_usb.ps1 写入 U 盘，在目标机上按启动菜单选 UEFI 或 Legacy 启动。",
+  u_tag:"使用者", u_h:"刻盘 → 启动 → 干活", u_p:"下载 WinPE_Desktop_v8.iso（约 1.0 GB），用 Rufus / Ventoy / make_usb.ps1 写入 U 盘，在目标机上按启动菜单选 UEFI 或 Legacy 启动。",
   u_p2:"进桌面后面板自动就位；需要远程时，底栏直接给出 ssh Administrator@IP，点 IP 可复制命令。",
   d_tag:"构建者", d_h:"从源码出盘", d_p:"需要 Windows ADK + WinPE 扩展、PowerShell 5.1，以及管理员权限。",
   d_note:"36_RunGates.ps1 全绿才建议出盘；注入与打包脚本会改镜像，请在干净工作副本上跑。",
@@ -145,7 +145,7 @@ en: {
   n_all:"← All projects", n_feat:"Capabilities", n_panel:"Desktop Panel", n_start:"Quick Start", n_limits:"Known Limits",
   h1a:"For machines that won't boot,", h1b:" won't connect, won't open",
   hero_sub:"A genuinely usable Windows pre-installation rescue environment: real WiFi, self-healing drivers, and remote access so you can fix a machine from another one. Burn it to a USB stick and go.",
-  btn_dl:"Download ISO (v8)", btn_src:"View source",
+  btn_dl:"Download latest ISO", btn_src:"View source",
   bg1:"Windows x64", bg2:"PowerShell build", bg3:"HTA panel, docMode 8", bg4:"Bilingual UI",
   feat_h:"Three things most rescue discs get wrong", feat_lead:"The usual pain: you can boot into PE, but there is no network, the disks are invisible, and you have to stand next to the machine.",
   f1_tag:"Network", f1_h:"WiFi actually works", f1_p:"wlansvc and wcmsvc are baked in offline — L2Schemas, the vWiFi filter stack, the WDI framework and the CSP table all aligned with stock WinRE. The GUI panel scans, connects, disconnects and acquires an IP. Not wired-only.",
@@ -158,7 +158,7 @@ en: {
   c2_h:"Backed by five live drills", c2_p:"Broken boot, disabled-driver BSOD, corrupted system files, lost drive letter, wiped primary+backup GPT — each injected and repaired over the remote channel in a VM, with the procedure written up.",
   c3_h:"Gate-driven engineering", c3_p:"Nothing ships until 36_RunGates.ps1 is green: syntax, CRLF/BOM, bilingual key parity, driver-pool completeness, service-key shape, L2Schemas counts. The assertions themselves have red-branch tests.",
   start_h:"How to use it", start_lead:"Users need one USB stick; builders need four commands.",
-  u_tag:"Users", u_h:"Burn → boot → work", u_p:"Download WinPE_Desktop_v8.iso (about 997 MB), write it to a USB stick with Rufus, Ventoy or make_usb.ps1, then pick UEFI or Legacy boot on the target machine.",
+  u_tag:"Users", u_h:"Burn → boot → work", u_p:"Download WinPE_Desktop_v8.iso (about 1.0 GB), write it to a USB stick with Rufus, Ventoy or make_usb.ps1, then pick UEFI or Legacy boot on the target machine.",
   u_p2:"The panel is on the desktop once it loads. For remote work, the status bar shows ssh Administrator@IP and clicking the IP copies the command.",
   d_tag:"Builders", d_h:"Build from source", d_p:"Requires the Windows ADK with the WinPE add-on, PowerShell 5.1, and an elevated session.",
   d_note:"Only burn an ISO while 36_RunGates.ps1 is green; the injection and packaging scripts modify images, so work on a clean copy.",
